@@ -1,0 +1,12 @@
+ENV=production
+PORT=4000
+
+TG_API_ID=20248870
+TG_API_HASH=0111cdf5090cde6669bc03c8bf10e733
+ADMIN_USERNAME=UMythus
+
+DATABASE_URL=postgres://teledrive_4k6v_user:HRPEVgDQs52tyntHz69PfeEqzgPW8Jd6@dpg-cihfmgdph6erq6ifg6gg-a/teledrive_4k6v
+
+IS_MAINTENANCE=
+
+CACHE_FILES_LIMIT=20GB
