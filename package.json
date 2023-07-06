@@ -1,38 +1,25 @@
 {
-  "name": "midudev",
-  "version": "1.0.0",
-  "description": "midudev README GitHub profile",
-  "main": "index.js",
-  "type": "module",
+  "name": "teledrive",
+  "version": "2.5.5",
+  "repository": "git@github.com:mgilangjanuar/teledrive.git",
+  "author": "M Gilang Januar <mgilangjanuar@teledriveapp.com>",
+  "license": "MIT",
+  "private": true,
+  "engines": {
+  "node": "18.16.0"
+  },
+
   "scripts": {
-    "update-readme": "node src/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "web": "yarn workspace web",
+    "server": "yarn workspace api",
+    "api": "yarn workspace api",
+    "build": "yarn workspaces run build",
+    "start": "cd api && node dist/index.js",
+    "docs": "USE_SSH=true cd docs && yarn deploy"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/midudev/midudev.git"
-  },
-  "keywords": [
-    "readme",
-    "github profile",
-    "github readme"
+  "workspaces": [
+    "web",
+    "api"
   ],
-  "author": "Miguel Ángel Durán <miduga@gmail.com> (https://midu.dev)",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/midudev/midudev/issues"
-  },
-  "homepage": "https://github.com/midudev/midudev#readme",
-  "dependencies": {
-    "node-fetch": "2.6.1",
-    "rss-parser": "3.12.0",
-    "twitch": "4.6.7",
-    "twitch-auth": "4.6.7"
-  },
-  "devDependencies": {
-    "standard": "16.0.4"
-  },
-  "eslintConfig": {
-    "extends": "./node_modules/standard/eslintrc.json"
-  }
+  "dependencies": {}
 }
